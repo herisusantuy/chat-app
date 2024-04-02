@@ -11,7 +11,7 @@ interface GeneralState {
   toggleCreateRoomModal: () => void 
 }
 
-export const useGeneralStore = create<GeneralState>()(
+ export const useGeneralStore = create<GeneralState>()(
   devtools(
     persist(
       (set) => ({
@@ -35,3 +35,4 @@ export const useGeneralStore = create<GeneralState>()(
     )
   )
 )
+ 

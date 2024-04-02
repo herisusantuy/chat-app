@@ -1,6 +1,6 @@
+import { User } from '@gql/graphql'
 import {create} from 'zustand'
-import { persist,devtools } from 'zustand/middleware'
-import { User } from './../gql/graphql';
+import { persist,devtools } from 'zustand/middleware' 
 
 
 interface UserState {

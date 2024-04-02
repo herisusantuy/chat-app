@@ -19,6 +19,15 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
+    // "baseUrl": "./src",
+    // "paths": {
+    //   "@components": ["./components/index.ts"],
+    //   "@layouts": ["./layouts/index.ts"],
+    //   "@page": ["./pages/index.ts"],
+    //   "@stores": ["./stores/index.ts"],
+    //   "@gql": ["./gql/index.ts"],
+    //   "@graphql/*": ["./graphql/*"]
+    // }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
