@@ -1,0 +1,37 @@
+
+name: chat-app
+
+on: 
+  push:
+    branches:
+      - "main"
+
+jobs: 
+  test-chat-app: 
+    runs-on: ubuntu-latest
+
+    
+    defaults:
+      run:
+        working-directory: .
+
+    # Étapes à exécuter dans le job
+    steps:
+      # Étape pour récupérer le code source
+      - uses: actions/checkout@v3
+
+      # Étape pour configurer l'environnement Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "19"
+          cache: "yarn"
+          cache-dependency-path: .yarn.lock
+
+      # Étape pour installer les dépendances du projet avec Yarn
+      - run: "yarn install --frozen-lockfile"
+
+      # Étape pour exécuter la vérification du style (lint)
+      - run: yarn lint
+
+      # Étape pour exécuter le build
+      - run: yarn typecheck 
