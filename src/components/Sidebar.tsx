@@ -7,7 +7,6 @@ import {
   Stack,
   rem,
   createStyles,
-  MantineTheme,
 } from "@mantine/core";
 
 import {
