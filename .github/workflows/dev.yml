@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: "19"
           cache: "npm"
-          cache-dependency-path: .package.lock
+          cache-dependency-path: ./package-lock
 
       # Étape pour installer les dépendances du projet avec Yarn
       - run: "npm install --frozen-lockfile"
