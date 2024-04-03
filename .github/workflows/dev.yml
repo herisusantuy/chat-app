@@ -24,10 +24,10 @@ jobs:
           node-version: "19"
 
       # Étape pour installer les dépendances du projet avec Yarn
-      - run: "npm install --frozen-lockfile"
+      - run: "yarn install --frozen-lockfile"
 
       # Étape pour exécuter la vérification du style (lint)
-      - run: npm lint
+      - run: yarn lint
 
       # Étape pour exécuter le build
-      - run: npm typecheck
+      - run: yarn typecheck
